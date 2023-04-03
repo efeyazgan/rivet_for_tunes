@@ -52,7 +52,7 @@ cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/pytho
 cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py
 ```
 
-Compile again:
+Compile:
 ```
 scram b -j8
 ```
