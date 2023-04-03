@@ -44,33 +44,8 @@ python rivet_for_tunes/append_cuetp8m2t4updown.py Configuration/GenProduction/py
 
 P11 requires the minbias parameters from Z2* to be added. i.e. 
 ```
-generator = cms.EDFilter("Pythia6GeneratorFilter",
-    pythiaHepMCVerbosity = cms.untracked.bool(False),
-    maxEventsToPrint = cms.untracked.int32(0),
-    pythiaPylistVerbosity = cms.untracked.int32(1),
-    filterEfficiency = cms.untracked.double(1.0),
-    crossSection = cms.untracked.double(72700000000),
-    comEnergy = cms.double(13000.0),
-    PythiaParameters = cms.PSet(
-        pythiaUESettingsBlock,
-        processParameters = cms.vstring('MSEL=0         ! User defined processes', 
-            'MSUB(11)=1     ! Min bias process', 
-            'MSUB(12)=1     ! Min bias process', 
-            'MSUB(13)=1     ! Min bias process', 
-            'MSUB(28)=1     ! Min bias process', 
-            'MSUB(53)=1     ! Min bias process', 
-            'MSUB(68)=1     ! Min bias process', 
-            'MSUB(92)=1     ! Min bias process, single diffractive', 
-            'MSUB(93)=1     ! Min bias process, single diffractive', 
-            'MSUB(94)=1     ! Min bias process, double diffractive', 
-            'MSUB(95)=1     ! Min bias process'),
-        # This is a vector of ParameterSet names to be read, in this order
-        parameterSets = cms.vstring('pythiaUESettings', 
-            'processParameters')
-    )
-)
-
-ProductionFilterSequence = cms.Sequence(generator)
+cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/python/SevenTeV/PythiaUEP11Settings_cfi.py
+cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py
 ```
 
 
