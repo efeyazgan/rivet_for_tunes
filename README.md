@@ -16,7 +16,7 @@ git remote add cms-gen ssh://git@gitlab.cern.ch:7999/cms-gen/Rivet.git
 git pull cms-gen master
 
 source rivetSetup.sh
-scram b -j8
+#scram b -j8
 
 cd ..
 git clone https://github.com/efeyazgan/rivet_for_tunes.git
