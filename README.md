@@ -20,14 +20,14 @@ scram b -j8
 
 curl -s https://raw.githubusercontent.com/cms-sw/genproductions/master/genfragments/ThirteenTeV/MinBias_TuneCP5_13TeV_pythia8_cff.py -o Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCP5_13TeV_pythia8_cff.py --create-dirs
 curl -s https://raw.githubusercontent.com/cms-sw/genproductions/UL2019/python/rivet_customize.py -o Configuration/GenProduction/python/rivet_customize.py
-
 curl -s https://raw.githubusercontent.com/cms-sw/cmssw/master/Configuration/Generator/python/MinBias_13TeV_pythia8_TuneCUETP8M1_cfi.py -o Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_13TeV_pythia8_cff.py --create-dirs
-
 curl -s https://raw.githubusercontent.com/cms-sw/genproductions/master/genfragments/SevenTeV/MinBias_TuneZ2star_7TeV_pythia6_cff.py -o Configuration/GenProduction/python/SevenTeV/MinBias_TuneZ2star_7TeV_pythia6_cff.py --create-dirs
 curl -s https://raw.githubusercontent.com/cms-sw/genproductions/master/genfragments/SevenTeV/MinBias_Tune4C_7TeV_pythia8_cff.py -o Configuration/GenProduction/python/SevenTeV/MinBias_Tune4C_7TeV_pythia8_cff.py --create-dirs
 curl -s https://raw.githubusercontent.com/cms-sw/cmssw/master/Configuration/Generator/python/PythiaUEP11Settings_cfi.py -o Configuration/GenProduction/python/SevenTeV/PythiaUEP11Settings_cfi.py --create-dirs 
 curl -s https://raw.githubusercontent.com/cms-sw/cmssw/master/Configuration/Generator/python/PythiaUEP11mpiHiSettings_cfi.py -o Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py --create-dirs
 
+cd ..
+git clone https://github.com/efeyazgan/rivet.git
 
 
 ```
