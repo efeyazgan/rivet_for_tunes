@@ -69,6 +69,14 @@ generator = cms.EDFilter("Pythia6GeneratorFilter",
             'processParameters')
     )
 )
+
+configurationMetadata = cms.untracked.PSet(
+    version = cms.untracked.string('$Revision: 1.2 $'),
+    name = cms.untracked.string('$Source: /local/reps/CMSSW/CMSSW/Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cff.py,v $'),
+    annotation = cms.untracked.string('PYTHIA6-MinBias P11 at 7TeV')
+)
+
+ProductionFilterSequence = cms.Sequence(generator)
 ```
 
 
