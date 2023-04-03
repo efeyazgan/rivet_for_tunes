@@ -49,12 +49,12 @@ cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/pytho
 ```
 
 
-open the already downloaded ```Configuration/GenProduction/python/rivet_customize.py``` and replace the line:
+In ```Configuration/GenProduction/python/rivet_customize.py``` and replace the line:
 ```process.rivetAnalyzer.AnalysisNames = cms.vstring('ATLAS_2010_S8591806', 'CMS_2010_S8547297', 'CMS_2010_S8656010', 'CMS_QCD_10_002')```
  with the two lines:
  ```
 process.rivetAnalyzer.AnalysisNames = cms.vstring('CMS_2015_I1384119')
-process.rivetAnalyzer.OutputFile = cms.string('out.yoda')
+process.rivetAnalyzer.OutputFile = cms.string('output.yoda')
 ```
 ```
 scram b -j8
