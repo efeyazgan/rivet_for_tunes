@@ -81,17 +81,7 @@ p11mpiHi:
 mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11mpiHi_7TeV_pythia6_cfi.py
 cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 ```
-in each rivet_cfg.py do the following changes:
-```
-comEnergy = cms.double(7000.0), -->     comEnergy = cms.double(13000.0),
-```
-and add the random number stuff:
-```
-from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper
-randSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)
-randSvc.populate()
-```
-using the following commands:
+Change the comenergy to 13 TeV and add the random number stuff:
 ```
 python rivet_for_tunes/append_iomc.py rivet_CP5_cfg.py
 python rivet_for_tunes/append_iomc.py rivet_CP5TuneUp_cfg.py
