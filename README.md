@@ -98,8 +98,8 @@ cmsRun rivet_CP5_cfg.py
 cmsRun rivet_CP5TuneUp_cfg.py
 cmsRun rivet_CP5TuneDown_cfg.py
 cmsRun rivet_CUETP8M2T4_cfg.py
-cmsRun rivet_CUETP8M2T4_TuneDown_cfg
-cmsRun rivet_CUETP8M2T4_TuneUp_cfg
+cmsRun rivet_CUETP8M2T4_TuneDown_cfg.py
+cmsRun rivet_CUETP8M2T4_TuneUp_cfg.py
 cmsRun rivet_TuneZ2star_7TeV_pythia6_cfg.py
 cmsRun rivet_TuneP11_7TeV_pythia6_cfg.py
 cmsRun rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py
