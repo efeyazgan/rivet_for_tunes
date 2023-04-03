@@ -52,14 +52,7 @@ cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/pytho
 cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py
 ```
 
-
-In ```Configuration/GenProduction/python/rivet_customize.py``` and replace the line:
-```process.rivetAnalyzer.AnalysisNames = cms.vstring('ATLAS_2010_S8591806', 'CMS_2010_S8547297', 'CMS_2010_S8656010', 'CMS_QCD_10_002')```
- with the two lines:
- ```
-process.rivetAnalyzer.AnalysisNames = cms.vstring('CMS_2015_I1384119')
-process.rivetAnalyzer.OutputFile = cms.string('output.yoda')
-```
+Compile again:
 ```
 scram b -j8
 ```
@@ -86,17 +79,17 @@ p11mpiHi:
 mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11mpiHi_7TeV_pythia6_cfi.py
 cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 ```
-Change the comenergy to 13 TeV and add the random number stuff:
+Change the comenergy to 13 TeV, add the random number stuff, rivet routine and output filename:
 ```
-python rivet_for_tunes/append_iomc.py rivet_CP5_cfg.py
-python rivet_for_tunes/append_iomc.py rivet_CP5TuneUp_cfg.py
-python rivet_for_tunes/append_iomc.py rivet_CP5TuneDown_cfg.py
-python rivet_for_tunes/append_iomc.py rivet_CUETP8M2T4_cfg.py
-python rivet_for_tunes/append_iomc.py rivet_CUETP8M2T4_TuneDown_cfg.py
-python rivet_for_tunes/append_iomc.py rivet_CUETP8M2T4_TuneUp_cfg.py
-python rivet_for_tunes/append_iomc.py rivet_TuneZ2star_7TeV_pythia6_cfg.py
-python rivet_for_tunes/append_iomc.py rivet_TuneP11_7TeV_pythia6_cfg.py
-python rivet_for_tunes/append_iomc.py rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CP5_cfg.py CMS_2015_I1384119 CP5_13TeV_pythia8.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CP5TuneUp_cfg.py CP5TuneUp_13TeV_pythia8.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CP5TuneDown_cfg.py CP5TuneDown_13TeV_pythia8.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CUETP8M2T4_cfg.py CUETP8M2T4_13TeV_pythia8.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CUETP8M2T4_TuneDown_cfg.py CUETP8M2T4_TuneDown.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CUETP8M2T4_TuneUp_cfg.py CUETP8M2T4_TuneUp.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_TuneZ2star_7TeV_pythia6_cfg.py TuneZ2star_7TeV_pythia6.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_TuneP11_7TeV_pythia6_cfg.py TuneP11_7TeV_pythia6.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py TuneP11mpiHi_7TeV_pythia6.yoda
 ```
 
 Run the rivet routines:
@@ -114,7 +107,7 @@ cmsRun rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py
 
 Make the plots and dump in a webpage:
 ```
-rivet-mkhtml -c plots.plot --mc-errs TuneCP5_13TeV_pythia8.yoda:Title="13 TeV CP5 pythia8":PolyMarker="triangle":DotScale=1.5 TuneCP5TuneUp_13TeV_pythia8.yoda:Title="13 TeV CP5TuneUp pythia8":PolyMarker="triangle":DotScale=1.5 TuneCP5TuneDown_13TeV_pythia8.yoda:Title="13 TeV CP5TuneDown pythia8":PolyMarker="triangle":DotScale=1.5 TuneCUETP8M2T4_13TeV_pythia8.yoda:Title="13 TeV CUETP8M2T4":PolyMarker="diamond":DotScale=1.5 TuneZ2star_13TeV_pythia6.yoda:Title="13 TeV Z2* pythia6":PolyMarker="o":DotScale=1.5 TuneP11_13TeV_pythia6.yoda:Title="13 TeV P11 pythia6":PolyMarker="*":DotScale=1.5 TuneP11mpiHi_13TeV_pythia6.yoda:Title="13 TeV P11mpiHi pythia6":PolyMarker="square":DotScale=1.5 -o /eos/user/e/efe/www/CP5_CP5Up_CP5Down_CUETP8M2T4_Z2star_p11_p11mpiHi
+rivet-mkhtml -c plots.plot --mc-errs CP5_13TeV_pythia8.yoda:Title="13 TeV CP5 pythia8":PolyMarker="triangle":DotScale=1.5 CP5TuneUp_13TeV_pythia8.yoda:Title="13 TeV CP5TuneUp pythia8":PolyMarker="triangle":DotScale=1.5 CP5TuneDown_13TeV_pythia8.yoda:Title="13 TeV CP5TuneDown pythia8":PolyMarker="triangle":DotScale=1.5 CUETP8M2T4_13TeV_pythia8.yoda:Title="13 TeV CUETP8M2T4":PolyMarker="diamond":DotScale=1.5 CUETP8M2T4TuneUp_13TeV_pythia8.yoda:Title="13 TeV CUETP8M2T4TuneUp":PolyMarker="diamond":DotScale=1.5 CUETP8M2T4TuneDown_13TeV_pythia8.yoda:Title="13 TeV CUETP8M2T4TuneDown":PolyMarker="diamond":DotScale=1.5 TuneZ2star_13TeV_pythia6.yoda:Title="13 TeV Z2* pythia6":PolyMarker="o":DotScale=1.5 TuneP11_13TeV_pythia6.yoda:Title="13 TeV P11 pythia6":PolyMarker="*":DotScale=1.5 TuneP11mpiHi_13TeV_pythia6.yoda:Title="13 TeV P11mpiHi pythia6":PolyMarker="square":DotScale=1.5 -o /eos/user/e/efe/www/CP5_CP5Up_CP5Down_CUETP8M2T4_Z2star_p11_p11mpiHi
 ```
 where
 plots.plot is
