@@ -75,7 +75,7 @@ cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_TuneZ2star_7TeV
 #p11:
 mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11Settings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py
 cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_TuneP11_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
-p11mpiHi:  
+#p11mpiHi:  
 mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11mpiHi_7TeV_pythia6_cfi.py
 cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 ```
