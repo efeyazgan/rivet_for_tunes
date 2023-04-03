@@ -19,7 +19,7 @@ source rivetSetup.sh
 scram b -j8
 
 cd ..
-git clone https://github.com/efeyazgan/rivet.git
+git clone https://github.com/efeyazgan/rivet_for_tunes.git
 
 curl -s https://raw.githubusercontent.com/cms-sw/genproductions/master/genfragments/ThirteenTeV/MinBias_TuneCP5_13TeV_pythia8_cff.py -o Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCP5_13TeV_pythia8_cff.py --create-dirs
 curl -s https://raw.githubusercontent.com/cms-sw/genproductions/UL2019/python/rivet_customize.py -o Configuration/GenProduction/python/rivet_customize.py
@@ -38,8 +38,8 @@ For CUETP8M2T4:
 sed -i 's/CUEP8M1/CUEP8M2T4/g' Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_13TeV_pythia8_cff.py
 cp Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_13TeV_pythia8_cff.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneUp_13TeV_pythia8_cff.py
 cp Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_13TeV_pythia8_cff.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneDown_13TeV_pythia8_cff.py
-python append_cuetp8m2t4updown.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneUp_13TeV_pythia8_cff.py
-python append_cuetp8m2t4updown.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneDown_13TeV_pythia8_cff.py
+python rivet_for_tunes/append_cuetp8m2t4updown.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneUp_13TeV_pythia8_cff.py
+python rivet_for_tunes/append_cuetp8m2t4updown.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneDown_13TeV_pythia8_cff.py
 ```
 
 P11 requires the minbias parameters from Z2* to be added. i.e. 
@@ -116,15 +116,15 @@ randSvc.populate()
 ```
 using the following commands:
 ```
-python append_iomc.py rivet_CP5_cfg.py
-python append_iomc.py rivet_CP5TuneUp_cfg.py
-python append_iomc.py rivet_CP5TuneDown_cfg.py
-python append_iomc.py rivet_CUETP8M2T4_cfg.py
-python append_iomc.py rivet_CUETP8M2T4_TuneDown_cfg.py
-python append_iomc.py rivet_CUETP8M2T4_TuneUp_cfg.py
-python append_iomc.py rivet_TuneZ2star_7TeV_pythia6_cfg.py
-python append_iomc.py rivet_TuneP11_7TeV_pythia6_cfg.py
-python append_iomc.py rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_CP5_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_CP5TuneUp_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_CP5TuneDown_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_CUETP8M2T4_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_CUETP8M2T4_TuneDown_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_CUETP8M2T4_TuneUp_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_TuneZ2star_7TeV_pythia6_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_TuneP11_7TeV_pythia6_cfg.py
+python rivet_for_tunes/append_iomc.py rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py
 ```
 
 Run the rivet routines:
