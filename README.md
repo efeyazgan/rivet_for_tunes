@@ -107,9 +107,9 @@ cmsRun rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py
 
 Make an envelope from the tune variations
 ```
-python2 Rivet/scripts/yodacombine -o CP5_13TeV_pythia8_unc.yoda envelope CP5_13TeV_pythia8.yoda CP5TuneUp_13TeV_pythia8.yoda CP5TuneDown_13TeV_pythia8.yoda
-python2 Rivet/scripts/yodacombine -o CUETP8M2T4_13TeV_pythia8_unc.yoda envelope CUETP8M2T4_13TeV_pythia8.yoda 
-python2 Rivet/scripts/yodacombine -o TuneP11_13TeV_pythia6_unc.yoda envelope TuneP11_13TeV_pythia6.yoda TuneP11mpiHi_13TeV_pythia6.yoda
+python2 Rivet/scripts/yodacombine -o CP5_13TeV_pythia8_unc.yoda eigentunes CP5_13TeV_pythia8.yoda CP5TuneUp_13TeV_pythia8.yoda CP5TuneDown_13TeV_pythia8.yoda
+python2 Rivet/scripts/yodacombine -o CUETP8M2T4_13TeV_pythia8_unc.yoda eigentunes CUETP8M2T4_13TeV_pythia8.yoda 
+python2 Rivet/scripts/yodacombine -o TuneP11_13TeV_pythia6_unc.yoda eigentunes TuneP11_13TeV_pythia6.yoda TuneP11mpiHi_13TeV_pythia6.yoda
 ```
 
 Make the plots and dump in a webpage:
