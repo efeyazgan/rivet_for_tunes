@@ -105,9 +105,16 @@ cmsRun rivet_TuneP11_7TeV_pythia6_cfg.py
 cmsRun rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py
 ```
 
+Make an envelope from the tune variations
+```
+python2 Rivet/scripts/yodacombine -o CP5_13TeV_pythia8_unc.yoda envelope CP5_13TeV_pythia8.yoda CP5TuneUp_13TeV_pythia8.yoda CP5TuneDown_13TeV_pythia8.yoda
+python2 Rivet/scripts/yodacombine -o CUETP8M2T4_13TeV_pythia8_unc.yoda envelope CUETP8M2T4_13TeV_pythia8.yoda 
+python2 Rivet/scripts/yodacombine -o TuneP11_13TeV_pythia6_unc.yoda TuneP11_13TeV_pythia6.yoda TuneP11mpiHi_13TeV_pythia6.yoda
+```
+
 Make the plots and dump in a webpage:
 ```
-rivet-mkhtml -c rivet_for_tunes/plots.plot --mc-errs CP5_13TeV_pythia8.yoda:Title="13 TeV CP5 pythia8":PolyMarker="triangle":DotScale=1.5 CP5TuneUp_13TeV_pythia8.yoda:Title="13 TeV CP5TuneUp pythia8":PolyMarker="triangle":DotScale=1.5 CP5TuneDown_13TeV_pythia8.yoda:Title="13 TeV CP5TuneDown pythia8":PolyMarker="triangle":DotScale=1.5 CUETP8M2T4_13TeV_pythia8.yoda:Title="13 TeV CUETP8M2T4":PolyMarker="diamond":DotScale=1.5 CUETP8M2T4TuneUp_13TeV_pythia8.yoda:Title="13 TeV CUETP8M2T4TuneUp":PolyMarker="diamond":DotScale=1.5 CUETP8M2T4TuneDown_13TeV_pythia8.yoda:Title="13 TeV CUETP8M2T4TuneDown":PolyMarker="diamond":DotScale=1.5 TuneZ2star_13TeV_pythia6.yoda:Title="13 TeV Z2* pythia6":PolyMarker="o":DotScale=1.5 TuneP11_13TeV_pythia6.yoda:Title="13 TeV P11 pythia6":PolyMarker="*":DotScale=1.5 TuneP11mpiHi_13TeV_pythia6.yoda:Title="13 TeV P11mpiHi pythia6":PolyMarker="square":DotScale=1.5 -o /eos/user/e/efe/www/CMS_2015_I1384119
+rivet-mkhtml -c rivet_for_tunes/plots.plot --mc-errs CP5_13TeV_pythia8_unc.yoda:Title="13 TeV CP5 pythia8":PolyMarker="triangle":DotScale=1.5  CUETP8M2T4_13TeV_pythia8_unc.yoda:Title="13 TeV CUETP8M2T4":PolyMarker="diamond":DotScale=1.5  TuneZ2star_13TeV_pythia6.yoda:Title="13 TeV Z2* pythia6":PolyMarker="o":DotScale=1.5 TuneP11_13TeV_pythia6_unc.yoda:Title="13 TeV P11 pythia6":PolyMarker="*":DotScale=1.5 -o /eos/user/e/efe/www/CMS_2015_I1384119
 ```
 where
 plots.plot is
