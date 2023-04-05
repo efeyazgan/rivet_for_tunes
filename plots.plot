@@ -9,5 +9,8 @@ RatioPlotErrorBandColor=grey!40!yellow!60
 ConnectBins=0
 RatioPlot=1
 Legend=1
+ErrorBands=1
+ErrorBandColor=red
+ErrorBandOpacity=0.8
 #LegendYPos=0.75
 # END PLOT
