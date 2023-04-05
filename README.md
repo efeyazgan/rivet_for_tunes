@@ -134,6 +134,9 @@ Legend=1
 # END PLOT
 ```
 
+See https://gitlab.com/hepcedar/rivet/-/blob/master/doc/tutorials/makeplots.md for plotting options. 
+
+
 https://efe.web.cern.ch/efe/CP5_vs_Z2star/CMS_2015_I1384119/index.html 
 
 Rivet routines to be used (incomplete list):
