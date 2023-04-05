@@ -116,23 +116,6 @@ Make the plots and dump in a webpage:
 ```
 rivet-mkhtml -c rivet_for_tunes/plots.plot --mc-errs CP5_13TeV_pythia8_unc.yoda:Title="13 TeV CP5 pythia8":PolyMarker="triangle":DotScale=1.5  CUETP8M2T4_13TeV_pythia8_unc.yoda:Title="13 TeV CUETP8M2T4":PolyMarker="diamond":DotScale=1.5  TuneZ2star_13TeV_pythia6.yoda:Title="13 TeV Z2* pythia6":PolyMarker="o":DotScale=1.5 TuneP11_13TeV_pythia6_unc.yoda:Title="13 TeV P11 pythia6":PolyMarker="*":DotScale=1.5 -o /eos/user/e/efe/www/CMS_2015_I1384119
 ```
-where
-plots.plot is
-```
-# BEGIN PLOT /CMS_2016_I1491950/*
-#XMin=1.0
-#XMax=2.0
-XTwosidedTicks=1
-YTwosidedTicks=1
-LogY=0
-LegendXPos=0.25
-RatioPlotErrorBandColor=grey!40!yellow!60
-ConnectBins=0
-RatioPlot=1
-Legend=1
-#LegendYPos=0.75
-# END PLOT
-```
 
 See https://gitlab.com/hepcedar/rivet/-/blob/master/doc/tutorials/makeplots.md for plotting options. 
 
