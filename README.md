@@ -95,15 +95,15 @@ python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_TuneP11mpiH
 
 Run the rivet routines:
 ```
-cmsRun rivet_CP5_cfg.py
-cmsRun rivet_CP5TuneUp_cfg.py
-cmsRun rivet_CP5TuneDown_cfg.py
-cmsRun rivet_CUETP8M2T4_cfg.py
-cmsRun rivet_CUETP8M2T4_TuneDown_cfg.py
-cmsRun rivet_CUETP8M2T4_TuneUp_cfg.py
-cmsRun rivet_TuneZ2star_7TeV_pythia6_cfg.py
-cmsRun rivet_TuneP11_7TeV_pythia6_cfg.py
-cmsRun rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py
+cmsRun rivet_CP5_cfg.py >& log_CP5 &
+cmsRun rivet_CP5TuneUp_cfg.py >& log_CP5TuneUp &
+cmsRun rivet_CP5TuneDown_cfg.py >& log_CP5TuneDown &
+cmsRun rivet_CUETP8M2T4_cfg.py >& log_CUETP8M2T4 &
+cmsRun rivet_CUETP8M2T4_TuneDown_cfg.py >& log_CUETP8M2T4_TuneDown &
+cmsRun rivet_CUETP8M2T4_TuneUp_cfg.py >& log_CUETP8M2T4_TuneUp &
+cmsRun rivet_TuneZ2star_7TeV_pythia6_cfg.py >&  log_TuneZ2star & 
+cmsRun rivet_TuneP11_7TeV_pythia6_cfg.py >& log_TuneP11 &
+cmsRun rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py >& TuneP11mpiHi &
 ```
 
 Make an envelope from the tune variations
