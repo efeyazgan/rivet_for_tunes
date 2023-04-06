@@ -59,25 +59,25 @@ scram b -j8
 
 ```
 #CP5
-cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCP5_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_CP5_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCP5_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_CP5_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #CP5TuneUp
-cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCP5TuneUp_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_CP5TuneUp_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCP5TuneUp_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_CP5TuneUp_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #CP5TuneDown
-cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCP5TuneDown_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_CP5TuneDown_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCP5TuneDown_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_CP5TuneDown_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #CUETP8M2T4:
-cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_CUETP8M2T4_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_CUETP8M2T4_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #CUETP8M2T4 Tune Down:
-cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneDown_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_CUETP8M2T4_TuneDown_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneDown_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_CUETP8M2T4_TuneDown_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #CUETP8M2T4 Tune Up:
-cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneDown_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_CUETP8M2T4_TuneUp_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/ThirteenTeV/MinBias_TuneCUEP8M2T4_TuneDown_13TeV_pythia8_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_CUETP8M2T4_TuneUp_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #Z2*:
-cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_TuneZ2star_7TeV_pythia6_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_TuneZ2star_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_TuneZ2star_7TeV_pythia6_cff.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_TuneZ2star_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #p11:
 mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11Settings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py
-cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_TuneP11_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_TuneP11_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #p11mpiHi:  
 mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11mpiHi_7TeV_pythia6_cfi.py
-cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 10000 --python_filename=rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 ```
 Change the comenergy to 13 TeV, add the random number stuff, rivet routine and output filename:
 ```
