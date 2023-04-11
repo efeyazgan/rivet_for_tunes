@@ -81,7 +81,7 @@ cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia
 ```
 Change the comenergy to 13 TeV, add the random number stuff, rivet routine and output filename:
 ```
-routines="CMS_2015_I1384119,CMS_2015_PAS_FSQ_15_007"
+routines="'CMS_2015_I1384119','CMS_2015_PAS_FSQ_15_007'"
 python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CP5_cfg.py $routines CP5_13TeV_pythia8.yoda
 python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CP5TuneUp_cfg.py $routines CP5TuneUp_13TeV_pythia8.yoda
 python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CP5TuneDown_cfg.py $routines CP5TuneDown_13TeV_pythia8.yoda
