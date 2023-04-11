@@ -29,7 +29,7 @@ with open(inFile, 'w') as f:
 with open(inFile, 'a+') as f:
     f.writelines([
         "process.load('GeneratorInterface.RivetInterface.rivetAnalyzer_cfi')\n"
-        "process.rivetAnalyzer.AnalysisNames = cms.vstring('"+inRivet+"')\n"
+        "process.rivetAnalyzer.AnalysisNames = cms.vstring("+inRivet+")\n"
         "process.rivetAnalyzer.OutputFile = cms.string('"+outyoda+"')\n"
         "process.generation_step+=process.rivetAnalyzer\n"
         "process.schedule.remove(process.RAWSIMoutput_step)\n"
