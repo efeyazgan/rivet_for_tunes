@@ -106,6 +106,10 @@ cmsRun rivet_TuneP11_7TeV_pythia6_cfg.py >& log_TuneP11 &
 cmsRun rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py >& TuneP11mpiHi &
 ```
 
+```
+sed -i 's/== 0/<= 1/g' Rivet/scripts/yodacombine
+```
+
 Make an envelope from the tune variations
 ```
 python2 Rivet/scripts/yodacombine -o CP5_13TeV_pythia8_unc.yoda eigentunes CP5_13TeV_pythia8.yoda CP5TuneUp_13TeV_pythia8.yoda CP5TuneDown_13TeV_pythia8.yoda
