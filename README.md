@@ -1,4 +1,4 @@
-# Rivet Instructions for running on basic tunes
+# Rivet Instructions for running on basic tunes with pythia8
 ```
 cmsrel CMSSW_11_2_4
 cd CMSSW_11_2_4/src
