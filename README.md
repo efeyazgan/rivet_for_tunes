@@ -82,6 +82,7 @@ mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py C
 cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
 #p11Tevatron:
 mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11TeVSettings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11TeV_pythia6_cfi.py
+cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_TuneP11TeV_pythia6_cfi.py --customise=Configuration/GenProduction/rivet_customize.py
 ```
 Change the comenergy to 13 TeV, add the random number stuff, rivet routine and output filename:
 ```
@@ -95,6 +96,7 @@ python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_CUETP8M2T4_
 python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_TuneZ2star_7TeV_pythia6_cfg.py $routines TuneZ2star_13TeV_pythia6.yoda
 python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_TuneP11_7TeV_pythia6_cfg.py $routines TuneP11_13TeV_pythia6.yoda
 python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py $routines TuneP11mpiHi_13TeV_pythia6.yoda
+python rivet_for_tunes/append_rivet_routine_and_output_yoda.py rivet_TuneP11TeV_pythia6_cfi.py $routines TuneP11TeV_pythia6.yoda
 ```
 
 Run the rivet routines:
@@ -108,6 +110,7 @@ cmsRun rivet_CUETP8M2T4_TuneUp_cfg.py >& log_CUETP8M2T4_TuneUp &
 cmsRun rivet_TuneZ2star_7TeV_pythia6_cfg.py >&  log_TuneZ2star & 
 cmsRun rivet_TuneP11_7TeV_pythia6_cfg.py >& log_TuneP11 &
 cmsRun rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py >& TuneP11mpiHi &
+cmsRun rivet_TuneP11TeV_pythia6_cfi.py >& TuneP11TeV &
 ```
 
 ```
