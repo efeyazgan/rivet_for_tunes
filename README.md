@@ -51,6 +51,7 @@ P11 requires the minbias parameters from Z2* to be added. i.e.
 ```
 cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/python/SevenTeV/PythiaUEP11Settings_cfi.py
 cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py
+cat rivet_for_tunes/p11_add_minbias_cfg.txt >> Configuration/GenProduction/python/SevenTeV/PythiaUEP11TeVSettings_cfi.py
 ```
 
 Compile:
