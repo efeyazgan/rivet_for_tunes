@@ -80,6 +80,8 @@ cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia
 #p11mpiHi:  
 mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11mpiHiSettings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11mpiHi_7TeV_pythia6_cfi.py
 cmsDriver.py Configuration/GenProduction/python/SevenTeV/MinBias_P11_7TeV_pythia6_cfi.py -s GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent RAWSIM --no_exec -n 1000000 --python_filename=rivet_TuneP11mpiHi_7TeV_pythia6_cfg.py --customise=Configuration/GenProduction/rivet_customize.py
+#p11Tevatron:
+mv Configuration/GenProduction/python/SevenTeV/PythiaUEP11TeVSettings_cfi.py Configuration/GenProduction/python/SevenTeV/MinBias_P11TeV_pythia6_cfi.py
 ```
 Change the comenergy to 13 TeV, add the random number stuff, rivet routine and output filename:
 ```
