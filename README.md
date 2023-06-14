@@ -127,9 +127,7 @@ python2 Rivet/scripts/yodacombine -o Run1.yoda envelope TuneZ2star_13TeV_pythia6
 
 Make the plots and dump in a webpage:
 ```
-rivet-mkhtml --mc-errs CP5_13TeV_pythia8_unc.yoda:Title="13 TeV CP5 P8":PolyMarker="triangle":DotScale=1.5:ErrorBands=1:ErrorBandColor=red -o /eos/user/e/efe/www/CMS_2015_I1384119
-
-rivet-mkhtml --mc-errs CP5_13TeV_pythia8_unc.yoda:Title="13 TeV CP5 pythia8":PolyMarker="triangle":DotScale=1.5:ErrorBands=1:ErrorBandColor=red  CUETP8M2T4_13TeV_pythia8_unc.yoda:Title="13 TeV CUETP8M2T4":PolyMarker="diamond":DotScale=1.5:ErrorBands=1:ErrorBandColor=blue  TuneZ2star_13TeV_pythia6.yoda:Title="13 TeV Z2* pythia6":PolyMarker="o":DotScale=1.5 TuneP11_13TeV_pythia6_unc.yoda:Title="13 TeV P11 pythia6":PolyMarker="*":DotScale=1.5:ErrorBands=1:ErrorBandColor=orange -o /eos/user/e/efe/www/test_all
+sh plot.sh
 ```
 
 See https://gitlab.com/hepcedar/rivet/-/blob/master/doc/tutorials/makeplots.md for plotting options. 
